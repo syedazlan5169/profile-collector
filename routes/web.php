@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Features;
 use Livewire\Volt\Volt;
+use App\Http\Controllers\PersonController;
+use App\Livewire\ImportPeople;
 
 Route::get('/', function () {
     return view('welcome');
@@ -13,6 +15,14 @@ Route::view('dashboard', 'dashboard')
     ->name('dashboard');
 
 Route::middleware(['auth'])->group(function () {
+
+    //Import people route (must be before resource route)
+    Route::get('/people/import', ImportPeople::class)->name('people.import');
+
+    //People routes
+    Route::resource('people', PersonController::class)->only(['index', 'create', 'show', 'edit', 'update']);
+
+
     Route::redirect('settings', 'settings/profile');
 
     Volt::route('settings/profile', 'settings.profile')->name('profile.edit');
