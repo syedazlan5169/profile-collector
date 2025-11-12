@@ -23,6 +23,7 @@ class Person extends Model
         'pk_number',
         'union_number',
         'department',
+        'branch',
         'car',
     ];
     protected $casts = [

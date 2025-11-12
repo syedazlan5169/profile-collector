@@ -27,6 +27,7 @@ class PersonCreate
                 'pk_number' => $data['pk_number'],
                 'union_number' => $data['union_number'],
                 'department' => $data['department'],
+                'branch' => $data['branch'],
                 'car' => $data['car'],
             ]);
         });

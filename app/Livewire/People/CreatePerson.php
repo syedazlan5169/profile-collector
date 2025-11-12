@@ -18,6 +18,7 @@ class CreatePerson extends Component
     public string $pk_number = '';
     public string $union_number = '';
     public string $department = '';
+    public string $branch = '';
     public array $car = [
         'make'  => '',
         'model' => '',
@@ -37,6 +38,7 @@ class CreatePerson extends Component
         'pk_number' => 'nullable|string|max:50',
         'union_number' => 'nullable|string|max:50',
         'department' => 'nullable|string|max:50',
+        'branch' => 'nullable|string|max:50',
         'car' => 'nullable|array',
         'car.make' => 'nullable|string|max:50',
         'car.model' => 'nullable|string|max:50',

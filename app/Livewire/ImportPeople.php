@@ -46,6 +46,7 @@ class ImportPeople extends Component
         'rank',
         'pk_number',
         'department',
+        'branch',
         'union_number',
         'car', // expects JSON string or will be converted to JSON
     ];
