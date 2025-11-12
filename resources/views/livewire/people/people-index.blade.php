@@ -128,7 +128,7 @@
                 <tr>
                     <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider">Name</th>
                     <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider">NRIC</th>
-                    <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider">Status</th>
+                    <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider">Phone</th>
                     <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider">Actions</th>
                 </tr>
             </thead>
@@ -149,11 +149,7 @@
                         <div class="text-sm text-gray-700 dark:text-gray-300 font-mono">{{ $person->nric }}</div>
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap">
-                        @if($person->trashed())
-                            <span class="px-2 py-1 text-xs rounded bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300">Deleted</span>
-                        @else
-                            <span class="px-2 py-1 text-xs rounded bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300">Active</span>
-                        @endif
+                        <div class="text-sm text-gray-700 dark:text-gray-300">{{ $person->phone ?? '' }}</div>
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm space-x-2">
                         @if($person->trashed())
